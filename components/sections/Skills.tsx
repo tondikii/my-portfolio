@@ -62,10 +62,12 @@ const Skills: NextComponentType<NextPageContext, {}, Props> = (
 
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
-      <div className="w-3/4 h-2/3 bg-black flex flex-col justify-center items-center mt-12 rounded-3xl p-12">
-        <strong className="text-5xl text-white mb-16">Skills</strong>
-        <div className="flex flex-row w-full">
-          <div className="flex flex-col w-1/2 pr-8">
+      <div className="w-11/12 md:w-5/6 lg:w-3/4 md:h-2/3 bg-black flex flex-col justify-center items-center mt-12 rounded-3xl p-4 md:p-12">
+        <strong className="text-4xl md:text-5xl text-white mb-4 md:mb-16">
+          Skills
+        </strong>
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="flex flex-col w-full md:w-1/2 md:pr-8">
             {skills.columnOne.map(
               (e: {label: string; value: number}, idx: number) => (
                 <div
@@ -79,14 +81,14 @@ const Skills: NextComponentType<NextPageContext, {}, Props> = (
                     animateOnRender={true}
                     labelColor="#6a1b9a"
                   />
-                  <label className="text-white w-5/12 ml-2">
+                  <label className="text-white text-sm lg:text-base w-5/12 ml-2">
                     {e?.label?.toUpperCase()}
                   </label>
                 </div>
               )
             )}
           </div>
-          <div className="flex flex-col justify-end w-1/2 pl-8">
+          <div className="flex flex-col justify-end w-full md:w-1/2 md:pl-8">
             {skills.columnTwo.map(
               (e: {label: string; value: number}, idx: number) => (
                 <div
@@ -100,7 +102,7 @@ const Skills: NextComponentType<NextPageContext, {}, Props> = (
                     animateOnRender={true}
                     labelColor="#6a1b9a"
                   />
-                  <label className="text-white w-5/12 ml-2">
+                  <label className="text-white text-sm lg:text-base w-5/12 ml-2">
                     {e?.label?.toUpperCase()}
                   </label>
                 </div>

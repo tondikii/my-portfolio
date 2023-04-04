@@ -28,7 +28,7 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (
           alt="Logo Profile"
         />
         <div className="flex flex-row space-x-4 md:space-x-8 items-center">
-          <ul className="flex flex-row space-x-2 md:space-x-4 lg:space-x-12">
+          <ul className="flex flex-row space-x-3 md:space-x-4 lg:space-x-12">
             <li
               role="button"
               className={
@@ -82,7 +82,7 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (
               Contact
             </li>
           </ul>
-          <div className="flex flex-row space-x-2 lg:space-x-4 items-center">
+          <div className="flex flex-row space-x-3 lg:space-x-4 items-center">
             <a
               role="button"
               className="border-2 rounded-full p-1 lg:p-2 border-instagram"
