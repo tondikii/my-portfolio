@@ -2,6 +2,7 @@ import type {NextComponentType, NextPageContext} from "next";
 import Image from "next/image";
 import styles from "@/styles/Navbar.module.css";
 import * as CONST from "@/constants";
+import LogoProfile from "@/assets/logo-profile.jpeg";
 
 interface Props {
   aboutRef: any;
@@ -19,7 +20,13 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (
   return (
     <nav className="flex justify-center bg-transparent text-zinc-900 fixed w-full">
       <div className="w-10/12 flex flex-row justify-between p-4 items-center">
-        <div className="">Logo</div>
+        <Image
+          src={LogoProfile}
+          className="w-10 h-10 rounded-full drop-shadow-sm"
+          height={0}
+          width={0}
+          alt="Logo Profile"
+        />
         <div className="flex flex-row space-x-8 items-center">
           <ul className="flex flex-row space-x-12">
             <li
