@@ -1,0 +1,7 @@
+.section {
+  @apply text-lg hover:border-b-2 border-zinc-900 font-medium;
+}
+
+.activeSection {
+  @apply text-lg border-b-2 border-zinc-900 font-medium;
+}

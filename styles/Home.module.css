@@ -1,0 +1,4 @@
+.container {
+  @apply text-zinc-900 w-screen;
+  background-color: #ffffff;
+}
