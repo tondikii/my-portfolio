@@ -30,33 +30,33 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
     window.onscroll = () => {
       const {innerHeight} = window;
       const {scrollTop} = document.documentElement;
+
       if (
-        scrollTop < innerHeight * 2 &&
+        scrollTop < innerHeight * 2 - innerHeight / 3 &&
         activeSection !== CONST.ABOUT_SECTION
       ) {
         setActiveSection(CONST.ABOUT_SECTION);
       } else if (
         scrollTop >= innerHeight * 2 &&
-        scrollTop < innerHeight * 3 &&
+        scrollTop < innerHeight * 3 - innerHeight / 3 &&
         activeSection !== CONST.SKILLS_SECTION
       ) {
         setActiveSection(CONST.SKILLS_SECTION);
       } else if (
         scrollTop >= innerHeight * 3 &&
-        scrollTop < innerHeight * 4 &&
+        scrollTop < innerHeight * 4 - innerHeight / 3 &&
         activeSection !== CONST.PROJECTS_SECTION
       ) {
         setActiveSection(CONST.PROJECTS_SECTION);
       } else if (
         scrollTop >= innerHeight * 4 &&
-        scrollTop < innerHeight * 5 &&
+        scrollTop < innerHeight * 5 - innerHeight / 3 &&
         activeSection !== CONST.CONTACT_SECTION
       ) {
         setActiveSection(CONST.CONTACT_SECTION);
       }
 
       let currentScrollPos = window?.pageYOffset;
-      console.log({prevScrollpos, currentScrollPos});
       if (prevScrollpos > currentScrollPos) {
         setShowNavbar(true);
       } else {
