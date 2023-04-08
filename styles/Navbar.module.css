@@ -5,3 +5,11 @@
 .activeSection {
   @apply text-sm md:text-base lg:text-lg border-b-2 border-zinc-900 font-medium;
 }
+
+#container {
+  transition: top 2s;
+}
+
+.hideNavbar {
+  top: -5rem;
+}

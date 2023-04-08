@@ -144,3 +144,7 @@ a {
 .font-lexend {
   font-family: "Lexend", sans-serif;
 }
+
+.w-12 {
+  width: 12%;
+}

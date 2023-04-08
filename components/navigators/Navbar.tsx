@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Navbar.module.css";
 import * as CONST from "@/constants";
 import LogoProfile from "@/assets/logo-profile.jpeg";
+import {useCallback, useRef, useEffect, useState} from "react";
 
 interface Props {
   aboutRef: any;
@@ -10,15 +11,22 @@ interface Props {
   projectsRef: any;
   contactRef: any;
   activeSection: number;
+  show: boolean;
 }
 
 const Navbar: NextComponentType<NextPageContext, {}, Props> = (
   props: Props
 ) => {
-  const {aboutRef, skillsRef, projectsRef, contactRef, activeSection} = props;
+  const {aboutRef, skillsRef, projectsRef, contactRef, activeSection, show} =
+    props;
 
   return (
-    <nav className="flex justify-center bg-transparent text-zinc-900 fixed w-full">
+    <div
+      id={styles.container}
+      className={`flex justify-center bg-transparent text-zinc-900 fixed w-full ${
+        show ? "" : styles.hideNavbar
+      }`}
+    >
       <div className="w-full lg:w-10/12 flex flex-row justify-between px-4 py-2 lg:py-4 items-center">
         <Image
           src={LogoProfile}
@@ -114,7 +122,7 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

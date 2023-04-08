@@ -19,18 +19,17 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
   const contactRef = useRef<HTMLDivElement>(null);
 
   const [activeSection, setActiveSection] = useState(CONST.ABOUT_SECTION);
-  const [renderSkillPage, setRenderSkillPage] = useState(false);
+  const [showNavbar, setShowNavbar] = useState<boolean>(true);
 
   const onClickContact = () => {
     contactRef?.current?.scrollIntoView({behavior: "smooth"});
   };
 
   const scrolling = useCallback(() => {
+    let prevScrollpos = window?.pageYOffset;
     window.onscroll = () => {
       const {innerHeight} = window;
       const {scrollTop} = document.documentElement;
-      // console.log({scrollTop, innerHeight});
-
       if (
         scrollTop < innerHeight * 2 &&
         activeSection !== CONST.ABOUT_SECTION
@@ -55,6 +54,15 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
       ) {
         setActiveSection(CONST.CONTACT_SECTION);
       }
+
+      let currentScrollPos = window?.pageYOffset;
+      console.log({prevScrollpos, currentScrollPos});
+      if (prevScrollpos > currentScrollPos) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+      prevScrollpos = currentScrollPos;
     };
   }, [activeSection]);
 
@@ -63,13 +71,14 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
   });
 
   return (
-    <div className="">
+    <>
       <Navbar
         aboutRef={aboutRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
         contactRef={contactRef}
         activeSection={activeSection}
+        show={showNavbar}
       />
       <div className={`${styles.container}`}>
         <div ref={aboutRef}>
@@ -85,7 +94,7 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
           <Contact />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
