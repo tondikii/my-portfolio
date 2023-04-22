@@ -59,7 +59,7 @@ const About: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
                   systems. Influenced to self-organise, as well as collaborate
                   effectively in team settings. Loves challenge that could
                   improve self knowledge and skills. Usually manages tools used
-                  to create clean, lightweight, and effective code
+                  to create clean, light, and effective code
                 </p>
                 <a
                   className="w-2/5 md:w-1/5 py-4 bg-gray-300 rounded-lg font-lexend mt-2 text-xs text-center self-center md:self-start"
