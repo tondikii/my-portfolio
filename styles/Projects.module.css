@@ -1,0 +1,38 @@
+@keyframes slideInRight {
+  from {
+    transform: translateX(10rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-10rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(10rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slideRight {
+  animation: slideInRight 0.5s ease-in;
+}
+
+.slideLeft {
+  animation: slideInLeft 0.5s ease-in;
+}
+
+.slideTop {
+  animation: slideInTop 0.5s ease-in;
+}

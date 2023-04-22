@@ -20,6 +20,15 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
 
   const [activeSection, setActiveSection] = useState(CONST.ABOUT_SECTION);
   const [showNavbar, setShowNavbar] = useState<boolean>(true);
+  const [renderAnimation, setRenderAnimation] = useState<{
+    about: boolean;
+    projects: boolean;
+    contact: boolean;
+  }>({
+    about: false,
+    projects: false,
+    contact: false,
+  });
 
   const onClickContact = () => {
     contactRef?.current?.scrollIntoView({behavior: "smooth"});
@@ -30,6 +39,21 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
     window.onscroll = () => {
       const {innerHeight} = window;
       const {scrollTop} = document.documentElement;
+      if (scrollTop >= innerHeight / 3 && !renderAnimation.about) {
+        setRenderAnimation({...renderAnimation, about: true});
+      }
+      if (
+        scrollTop >= innerHeight * 2 + innerHeight / 3 &&
+        !renderAnimation.projects
+      ) {
+        setRenderAnimation({...renderAnimation, projects: true});
+      }
+      if (
+        scrollTop >= innerHeight * 3 + innerHeight / 3 &&
+        !renderAnimation.contact
+      ) {
+        setRenderAnimation({...renderAnimation, contact: true});
+      }
 
       if (
         scrollTop < innerHeight * 2 - innerHeight / 3 &&
@@ -64,7 +88,7 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
       }
       prevScrollpos = currentScrollPos;
     };
-  }, [activeSection]);
+  }, [activeSection, renderAnimation]);
 
   useEffect(() => {
     scrolling();
@@ -82,16 +106,19 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
       />
       <div className={`${styles.container}`}>
         <div ref={aboutRef}>
-          <About onClickContact={onClickContact} />
+          <About
+            onClickContact={onClickContact}
+            renderAnimation={renderAnimation?.about}
+          />
         </div>
         <div ref={skillsRef}>
           <Skills />
         </div>
         <div ref={projectsRef}>
-          <Projects />
+          <Projects renderAnimation={renderAnimation?.projects} />
         </div>
         <div ref={contactRef}>
-          <Contact />
+          <Contact renderAnimation={renderAnimation?.contact} />
         </div>
       </div>
     </>

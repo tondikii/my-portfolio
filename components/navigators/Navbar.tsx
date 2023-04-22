@@ -27,7 +27,7 @@ const Navbar: NextComponentType<NextPageContext, {}, Props> = (
         show ? "" : styles.hideNavbar
       }`}
     >
-      <div className="w-full lg:w-10/12 flex flex-row justify-between px-4 py-2 lg:py-4 items-center">
+      <div className="w-full lg:w-10/12 flex flex-row justify-between p-4 items-center">
         <Image
           src={LogoProfile}
           className="w-8 h-8 lg:w-10 lg:h-10 rounded-full drop-shadow-sm"

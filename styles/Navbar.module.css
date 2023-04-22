@@ -7,9 +7,12 @@
 }
 
 #container {
-  transition: top 2s;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 
 .hideNavbar {
-  top: -5rem;
+  transform: translateY(-5rem)
 }
