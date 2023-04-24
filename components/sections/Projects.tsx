@@ -6,6 +6,7 @@ import SociagramDesktopProfile from "@/assets/sociagram-desktop-profile.png";
 import HanaAquaMobile from "@/assets/hana-aqua-mobile.png";
 import HanaAquaDesktop from "@/assets/hana-aqua-desktop.png";
 import Image from "next/image";
+import Head from "next/head";
 
 import styles from "@/styles/About.module.css";
 
@@ -28,6 +29,11 @@ const Projects: NextComponentType<NextPageContext, {}, Props> = (
 
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
+      <Head>
+        <meta name="description" content="Tondiki Andika's Project" />
+        <meta property="og:title" content="Tondiki Andika's Project" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {renderAnimation && (
         <>
           <strong

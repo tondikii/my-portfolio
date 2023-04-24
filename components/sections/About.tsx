@@ -2,6 +2,7 @@ import type {NextComponentType, NextPageContext} from "next";
 import Image from "next/image";
 import SelfPhoto from "@/assets/self-photo.png";
 import styles from "@/styles/About.module.css";
+import Head from "next/head";
 
 interface Props {
   onClickContact: Function;
@@ -12,15 +13,23 @@ const About: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
   const {onClickContact = () => {}, renderAnimation} = props;
   return (
     <div>
+      <Head>
+        <meta
+          name="description"
+          content="Tondiki Andika is a Full-Stack Developer/ Full Stack Developer / Web Developer / Mobile Developer / Front End Developer / Back End Developer"
+        />
+        <meta property="og:title" content="About Tondiki Andika" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="h-screen w-full flex justify-center items-center">
         <div className="w-5/6 flex flex-col md:flex-row justify-between md:h-4/5 items-end">
           <div
             className={`flex flex-col md:mb-32 w-full md:w-1/3 ${styles.slideLeft}`}
           >
             <span className="text-xs lg:text-xl">Welcome to my portfolio</span>
-            <strong className="text-4xl font-lexend">
+            <h1 className="text-4xl font-lexend font-bold">
               Hi! I’m a Full-Stack Developer
-            </strong>
+            </h1>
             <button
               className="w-2/5 py-4 bg-gray-300 rounded-lg font-lexend mt-2 text-xs"
               onClick={() => onClickContact()}

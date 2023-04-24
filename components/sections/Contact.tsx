@@ -3,6 +3,7 @@ import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import {useRef, useState} from "react";
 import Swal from "sweetalert2";
+import Head from "next/head";
 
 import styles from "@/styles/Contact.module.css";
 
@@ -54,6 +55,14 @@ const Contact: NextComponentType<NextPageContext, {}, Props> = (
 
   return (
     <div className="h-screen w-full flex justify-center items-center">
+      <Head>
+        <meta
+          name="description"
+          content="Contact Tondiki Andika for furhter information or any services needed"
+        />
+        <meta property="og:title" content="Contact Tondiki Andika" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {renderAnimation && (
         <div className="w-5/6 flex flex-col-reverse md:flex-row justify-between md:h-4/5 md:items-end">
           <Image

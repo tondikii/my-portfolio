@@ -7,6 +7,7 @@ import * as CONST from "@/constants";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import Head from "next/head";
 
 interface Props {}
 
@@ -96,6 +97,21 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
 
   return (
     <>
+      <Head>
+        <title>Tondiki Andika</title>
+        <link rel="canonical" href="https://tondikiandika.vercel.app" />
+        <meta name="description" content="Tondiki Andika's portfolio website" />
+        <meta property="og:title" content="Tondiki Andika" />
+        <meta property="og:url" content="https://tondikiandika.vercel.app/" />
+        <meta property="og:url" content="https://tondikiandika.vercel.app/" />
+        <meta property="og:image" content="/illustration-developer.svg" />
+        <meta
+          property="og:description"
+          content="Tondiki Andika's portfolio website"
+        />
+        <meta property="og:type" content="portfolio website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar
         aboutRef={aboutRef}
         skillsRef={skillsRef}
