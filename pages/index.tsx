@@ -100,6 +100,10 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
       <Head>
         <title>Tondiki Andika</title>
         <link rel="canonical" href="https://tondikiandika.vercel.app" />
+        <meta
+          name="google-site-verification"
+          content="TuMQlbTsYDlj_-MZbFQ9YgX3L_q1nx_gX8_mh-57t7M"
+        />
         <meta name="description" content="Tondiki Andika's portfolio website" />
         <meta property="og:title" content="Tondiki Andika" />
         <meta property="og:url" content="https://tondikiandika.vercel.app/" />
