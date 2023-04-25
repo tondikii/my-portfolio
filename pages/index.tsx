@@ -119,7 +119,11 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
         <meta property="og:image" content="/favicon.ico" key="ogImage" />
         <meta property="og:type" content="website" key="ogType" />
         <meta name="author" content="Tondiki" key="ogAuthor" />
-        <meta name="application-name" content="Tondiki Andika's PortFolio" />
+        <meta
+          name="application-name"
+          content="Tondiki Andika's PortFolio"
+          key="appName"
+        />
         <meta
           name="Tondiki Andika's Portfolio"
           content="Portfolio content"
