@@ -1,7 +1,6 @@
 import type {NextComponentType, NextPageContext} from "next";
 import ProgressBar from "@ramonak/react-progress-bar";
 import {useEffect, useState} from "react";
-import Head from "next/head";
 
 interface Props {}
 
@@ -63,14 +62,6 @@ const Skills: NextComponentType<NextPageContext, {}, Props> = (
 
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center">
-      <Head>
-        <meta
-          name="description"
-          content="Contact Tondiki Andika for furhter information or any services needed"
-        />
-        <meta property="og:title" content="Contact Tondiki Andika" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="w-11/12 md:w-5/6 lg:w-3/4 md:h-2/3 bg-black flex flex-col justify-center items-center mt-12 rounded-3xl p-4 md:p-12">
         <strong className="text-4xl md:text-5xl text-white mb-4 md:mb-16">
           Skills

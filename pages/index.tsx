@@ -99,22 +99,48 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
     <>
       <Head>
         <title>Tondiki Andika</title>
-        <link rel="canonical" href="https://tondikiandika.vercel.app" />
+        <link
+          rel="canonical"
+          href="https://tondikiandika.vercel.app"
+          key="canonical"
+        />
+        <link rel="icon" href="/favicon.ico" key="icon" />
+        <meta charSet="UTF-8" key="charSet" />
         <meta
           name="google-site-verification"
           content="TuMQlbTsYDlj_-MZbFQ9YgX3L_q1nx_gX8_mh-57t7M"
+          key="googleVerification"
         />
-        <meta name="description" content="Tondiki Andika's portfolio website" />
-        <meta property="og:title" content="Tondiki Andika" />
-        <meta property="og:url" content="https://tondikiandika.vercel.app/" />
-        <meta property="og:url" content="https://tondikiandika.vercel.app/" />
-        <meta property="og:image" content="/illustration-developer.svg" />
+        <meta
+          property="og:url"
+          content="https://tondikiandika.vercel.app/"
+          key="ogUrl"
+        />
+        <meta property="og:image" content="/favicon.ico" key="ogImage" />
+        <meta property="og:type" content="website" key="ogType" />
+        <meta name="author" content="Tondiki" key="ogAuthor" />
+        <meta name="application-name" content="Tondiki Andika's PortFolio" />
+        <meta
+          name="Tondiki Andika's Portfolio"
+          content="Portfolio content"
+          key="name"
+        />
+        <meta
+          property="og:title"
+          content="Tondiki Andika Portfolio"
+          key="ogTitle"
+        />
         <meta
           property="og:description"
-          content="Tondiki Andika's portfolio website"
+          name="description"
+          content="Hi! I am Tondiki Andika, a Full-Stack Developer. I am experienced in web and mobile application development using React, React Native, Next, etc."
+          key="desc"
         />
-        <meta property="og:type" content="portfolio website" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="keywords"
+          content="ton, tondi, tondiki, dika ,andika, tondi dika, tondiki dika, tondiki andika, portfolio, developer, frontend, front end, backend, back end, fullstack, full-stack, full stack, web, mobile,app, application, development, programming, design, database, html, css, javascript, js, typescript, ts, react, react native, next, postgre, sql, postgresql, project, projects, sociagram, hana, aqua"
+          key="keyWords"
+        />
       </Head>
       <Navbar
         aboutRef={aboutRef}
