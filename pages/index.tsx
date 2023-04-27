@@ -120,25 +120,20 @@ const HomePage: NextComponentType<NextPageContext, {}, Props> = (
         <meta property="og:type" content="website" key="ogType" />
         <meta name="author" content="Tondiki" key="ogAuthor" />
         <meta
-          name="application-name"
-          content="Tondiki Andika's PortFolio"
-          key="appName"
-        />
-        <meta
-          name="Tondiki Andika's Portfolio"
-          content="Portfolio content"
-          key="name"
-        />
-        <meta
           property="og:title"
           content="Tondiki Andika Portfolio"
           key="ogTitle"
         />
         <meta
-          property="og:description"
           name="description"
           content="Hi! I am Tondiki Andika, a Full-Stack Developer. I am experienced in web and mobile application development using React, React Native, Next, etc."
           key="desc"
+        />
+        <meta
+          property="og:description"
+          name="description"
+          content="Hi! I am Tondiki Andika, a Full-Stack Developer. I am experienced in web and mobile application development using React, React Native, Next, etc."
+          key="ogDesc"
         />
         <meta
           name="keywords"
