@@ -54,12 +54,14 @@ const About: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
               />
               <div className={`flex flex-col md:ml-12 ${styles.slideRight}`}>
                 <p className="font-medium text-base text-justify md:text-xl mb-4">
-                  Hi! I am Tondiki Andika, an Experienced Web and Mobile
-                  Developer. Operate features, design, test and maintain web
-                  systems. Influenced to self-organise, as well as collaborate
-                  effectively in team settings. Loves challenge that could
-                  improve self knowledge and skills. Usually manages tools used
-                  to create clean, light, and effective code
+                  {`Hello! I'm Tondiki Andika, a skilled Full-Stack Developer with
+                  expertise in web and mobile development. Proficient in feature
+                  operation, design, testing, and maintaining web systems, I
+                  excel both independently and collaboratively. Committed to
+                  self-organization and effective teamwork, I thrive on
+                  challenges for continuous learning. Proficient in managing
+                  tools to produce clean, efficient code for seamless
+                  performance across the technology stack.`}
                 </p>
                 <a
                   className="w-2/5 md:w-1/5 py-4 bg-gray-300 rounded-lg font-lexend mt-2 text-xs text-center self-center md:self-start"
