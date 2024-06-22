@@ -65,7 +65,7 @@ const About: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
                 </p>
                 <a
                   className="w-2/5 md:w-1/5 py-4 bg-gray-300 rounded-lg font-lexend mt-2 text-xs text-center self-center md:self-start"
-                  href="https://cv-tondikiandika.tiiny.site/"
+                  href="https://tan-devondra-84.tiiny.site"
                   target="_blank"
                   role="button"
                 >
