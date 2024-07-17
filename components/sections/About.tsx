@@ -31,6 +31,7 @@ const About: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
           <Image
             src="/illustration-developer.svg"
             alt="Illustration developer"
+            priority
             className={`w-4/5 md:w-7/12 ${styles.slideRight}`}
             width={0}
             height={0}
